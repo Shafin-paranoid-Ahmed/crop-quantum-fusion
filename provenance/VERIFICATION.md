@@ -24,4 +24,17 @@ Git preserves original file bytes, including historical line endings. Whitespace
 checks cover newly written root documentation/scripts rather than rewriting frozen
 research CSVs. Large embeddings are checksummed local artifacts and a local archive, excluded from Git.
 
-Fresh local-clone and local artifact-restore checks are the final acceptance step.
+Fresh local clones passed standalone verification. Baseline inputs were restored
+from the local ZIP bundle; quantum and robustness inputs were restored from that
+fresh baseline clone. All restored hashes, dimensions, sample ordering and labels
+passed. Canonical E2 predictions and all 361 robustness Macro-F1 values were again
+verified from the clones. Quantum clone checks also cover original E3-4, E3-8,
+residual, re-uploading and the paired deep-classical checkpoint. Git worktrees were
+clean after checks. No original source-code imports or implicit neighboring paths
+were required. The machine's global Git checkout hook adds a TokenSave ignore entry;
+the repository now includes that ignore rule so fresh checkouts remain clean.
+
+Publication status: LOCAL ONLY. No GitHub repository, release or Git remote exists
+for this extraction. Automatic approval review blocked the proposed artifact upload;
+the user explicitly chose to keep everything local. No upload was attempted after
+that choice. Future publication requires a new user instruction.
