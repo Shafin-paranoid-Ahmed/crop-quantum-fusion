@@ -12,3 +12,9 @@ Data/*
 corruption_study/data/
 e1_temporal/cache/
 e2_multimodal_fusion/features/*_embeddings.npz
+.tokensave
+.rtk/
+.vscode/
+.claude/
+.codex/
+.agents/

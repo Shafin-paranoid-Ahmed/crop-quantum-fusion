@@ -18,5 +18,7 @@
       "bytes": 24550331,
       "sha256": "948442bfcddfedad78fa061c548401cd4df0339f688f8d6584c1ba86c4bdb5d9"
     }
-  ]
+  ],
+  "published": false,
+  "local_archive": "../crop-multimodal-baselines/.artifacts/embeddings-v1.zip"
 }

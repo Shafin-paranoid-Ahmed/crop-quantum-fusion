@@ -19,24 +19,21 @@ $PY = Join-Path $PWD '.venv/Scripts/python.exe'
 
 ## Frozen embedding inputs
 
-The Git checkout includes the small checkpoints and CSV evidence. Large NPZ inputs
-are excluded from Git. Sign in with GitHub CLI (`gh auth login`) using an account with
-access to the private baseline repository, then run:
+The Git checkout includes small checkpoints and CSV evidence. Large NPZ inputs
+are excluded from Git but are already present in the three prepared working directories.
+There is no GitHub repository or release yet. A fresh local clone can restore them with:
 
 ```powershell
-& $PY scripts/fetch_artifacts.py --download
-& $PY scripts/verify.py --artifacts --quantum
+& $PY scripts/fetch_artifacts.py --from-archive 'G:/PROJECTS/RECOVERY/crop-multimodal-baselines/.artifacts/embeddings-v1.zip'
+& $PY scripts/verify.py --artifacts
 ```
 
-Alternatively, copy verified inputs from a baseline checkout that already has them:
-
-```powershell
-& $PY scripts/fetch_artifacts.py --from-directory ../crop-multimodal-baselines
-```
-
-The helper refuses to overwrite differing artifacts and validates SHA-256.
-It copies only paths listed in ARTIFACTS.json, without extracting arbitrary archive paths.
-Raw datasets are separate inputs and are not included in this release.
+Alternatively, pass `--from-directory` with the path to the prepared baseline checkout.
+The helper refuses to overwrite differing artifacts and validates SHA-256. It copies
+only paths listed in ARTIFACTS.json. The archive path is an example for this machine;
+the archive and repositories can be relocated. Raw datasets are not in the bundle.
+For quantum model checks, add `--quantum` to the verifier command after installing
+the quantum requirements. `--download` is disabled while publication status is local-only.
 
 ## Reproduction examples
 

@@ -1,6 +1,6 @@
 # Extraction verification — 2026-10-12
 
-Local standalone checks passed before publication.
+Local standalone checks passed. The user selected local-only retention; no remote is configured.
 
 - E3-4, E3-8, residual and re-uploading checkpoints pass synthetic forward/backward checks.
 - The re-uploading paired deep-classical checkpoint loads and differentiates.
@@ -22,7 +22,6 @@ used CPU default.qubit; they are not a simulator performance benchmark.
 
 Git preserves original file bytes, including historical line endings. Whitespace
 checks cover newly written root documentation/scripts rather than rewriting frozen
-research CSVs. Large embeddings are a checksummed private release asset.
+research CSVs. Large embeddings are checksummed local artifacts and a local archive, excluded from Git.
 
-Fresh remote clone and release-download verification follows publication; its outcome
-will be recorded in the next verification checkpoint.
+Fresh local-clone and local artifact-restore checks are the final acceptance step.

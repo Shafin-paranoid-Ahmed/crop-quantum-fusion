@@ -35,6 +35,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--from-directory', type=Path, help='Baseline checkout containing the frozen files')
+    group.add_argument('--from-archive', type=Path, help='Local embeddings-v1.zip bundle')
     group.add_argument('--download', action='store_true', help='Use authenticated gh to download the private release')
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'ARTIFACTS.json').read_text(encoding='utf-8'))
@@ -42,10 +43,14 @@ def main():
         for item in manifest['files']:
             install(args.from_directory / item['path'], item)
         return
+    if args.download and not manifest.get('published', False):
+        raise RuntimeError('This snapshot is local-only. Use --from-directory or --from-archive; no GitHub release has been published.')
     with tempfile.TemporaryDirectory(prefix='crop-artifacts-') as temporary:
         directory = Path(temporary)
-        subprocess.run(['gh', 'release', 'download', manifest['release'], '--repo', manifest['repository'], '--pattern', manifest['asset'], '--dir', str(directory)], check=True)
-        with zipfile.ZipFile(directory / manifest['asset']) as archive:
+        if args.download:
+            subprocess.run(['gh', 'release', 'download', manifest['release'], '--repo', manifest['repository'], '--pattern', manifest['asset'], '--dir', str(directory)], check=True)
+        archive_path = args.from_archive if args.from_archive else directory / manifest['asset']
+        with zipfile.ZipFile(archive_path) as archive:
             for item in manifest['files']:
                 # Extract only allowlisted paths into a flat temporary file.
                 candidate = directory / 'verified-input.npz'
