@@ -1,0 +1,14 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.cache/
+.torch/
+.pytest_cache/
+.artifacts/
+*.log
+.env
+Data/*
+!Data/*.csv
+corruption_study/data/
+e1_temporal/cache/
+e2_multimodal_fusion/features/*_embeddings.npz

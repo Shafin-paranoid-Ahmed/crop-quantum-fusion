@@ -1,0 +1,50 @@
+{
+  "models.py": {
+    "mtime": 1780516345.9836342,
+    "seen": 1790932851.778593,
+    "ast_hash": "fd1ec35f5997f57c38a4977ec7c315e4",
+    "semantic_hash": ""
+  },
+  "quantum_layer.py": {
+    "mtime": 1780525415.9954946,
+    "seen": 1790932851.778593,
+    "ast_hash": "dea2653772f0db6c1052d59dd8515a7e",
+    "semantic_hash": ""
+  },
+  "results/e2_matched_4_metrics.json": {
+    "mtime": 1780516527.6103947,
+    "seen": 1790932851.778593,
+    "ast_hash": "e689d63784e23fef48e857e94a179c51",
+    "semantic_hash": ""
+  },
+  "results/e3_4_vqc_metrics.json": {
+    "mtime": 1780535431.659391,
+    "seen": 1790932851.778593,
+    "ast_hash": "f4b33dae218440f5ec643bb0e12de3c5",
+    "semantic_hash": ""
+  },
+  "scripts/smoke_test.py": {
+    "mtime": 1780516358.932767,
+    "seen": 1790932851.778593,
+    "ast_hash": "c5083f8d4b56b0300f0c868e94cd526f",
+    "semantic_hash": ""
+  },
+  "scripts/train_e3.py": {
+    "mtime": 1780516447.4444337,
+    "seen": 1790932851.778593,
+    "ast_hash": "e5b11e58823ae30e6cdc297993c683ce",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1780709937.7149844,
+    "seen": 1790932851.778593,
+    "ast_hash": "83d450cbfe83c63c390e8a8b8eb0c2c3",
+    "semantic_hash": ""
+  },
+  "RUN_COMMANDS.txt": {
+    "mtime": 1780550329.188192,
+    "seen": 1790932851.778593,
+    "ast_hash": "e47e904c7edd642a087b4111a3dbb81c",
+    "semantic_hash": ""
+  }
+}

@@ -1,0 +1,7 @@
+# Preserve original research artifact bytes, including historical line endings.
+* -text
+*.pt binary
+*.pth binary
+*.npz binary
+*.png binary
+*.pdf binary

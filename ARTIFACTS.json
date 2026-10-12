@@ -1,0 +1,22 @@
+{
+  "repository": "Shafin-paranoid-Ahmed/crop-multimodal-baselines",
+  "release": "embeddings-v1",
+  "asset": "embeddings-v1.zip",
+  "files": [
+    {
+      "path": "e2_multimodal_fusion/features/test_embeddings.npz",
+      "bytes": 27747913,
+      "sha256": "d8335654711b457e2fc38771b14ca2e67a305d79e4c9974e95c977581caac6b3"
+    },
+    {
+      "path": "e2_multimodal_fusion/features/train_embeddings.npz",
+      "bytes": 220428055,
+      "sha256": "d0ea4916ac2e8ce0efb64f519cc3a55509824c4dcc23f4d0ce70f33fd13e681d"
+    },
+    {
+      "path": "e2_multimodal_fusion/features/val_embeddings.npz",
+      "bytes": 24550331,
+      "sha256": "948442bfcddfedad78fa061c548401cd4df0339f688f8d6584c1ba86c4bdb5d9"
+    }
+  ]
+}

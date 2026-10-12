@@ -1,0 +1,11 @@
+{
+  "0": "evaluate_iot_robustness_stability.py",
+  "1": "evaluate_iot_robustness.py",
+  "2": "train_bottleneck.py",
+  "3": "train_reupload.py",
+  "4": "FusionProjectionK",
+  "5": "compare_bottlenecks.py",
+  "6": "E3 Reupload Run Commands",
+  "7": "pathlib",
+  "8": "E3 Bottleneck Sweep"
+}

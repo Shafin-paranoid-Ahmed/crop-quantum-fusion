@@ -1,0 +1,11 @@
+# Python 3.10; source versions, platform-selected torch wheels.
+torch==2.11.0
+torchvision==0.26.0
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+pillow==12.2.0
+opencv-python==4.11.0.86
+matplotlib==3.10.9
+seaborn==0.13.2
