@@ -44,7 +44,7 @@ def main():
             install(args.from_directory / item['path'], item)
         return
     if args.download and not manifest.get('published', False):
-        raise RuntimeError('This snapshot is local-only. Use --from-directory or --from-archive; no GitHub release has been published.')
+        raise RuntimeError('Embedding artifacts remain local. Use --from-directory or --from-archive; no embedding release has been published.')
     with tempfile.TemporaryDirectory(prefix='crop-artifacts-') as temporary:
         directory = Path(temporary)
         if args.download:

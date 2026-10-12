@@ -1,6 +1,6 @@
 # Extraction verification — 2026-10-12
 
-Local standalone checks passed. The user selected local-only retention; no remote is configured.
+Local standalone checks passed on 2026-10-12. See the dated publication update below for current distribution status.
 
 - E3-4, E3-8, residual and re-uploading checkpoints pass synthetic forward/backward checks.
 - The re-uploading paired deep-classical checkpoint loads and differentiates.
@@ -34,7 +34,20 @@ clean after checks. No original source-code imports or implicit neighboring path
 were required. The machine's global Git checkout hook adds a TokenSave ignore entry;
 the repository now includes that ignore rule so fresh checkouts remain clean.
 
-Publication status: LOCAL ONLY. No GitHub repository, release or Git remote exists
+Historical publication status on 2026-10-12: LOCAL ONLY. No GitHub repository, release or Git remote exists
 for this extraction. Automatic approval review blocked the proposed artifact upload;
 the user explicitly chose to keep everything local. No upload was attempted after
 that choice. Future publication requires a new user instruction.
+
+
+## Private GitHub publication authorization — 2026-10-13
+
+The user subsequently authorized pushing the three committed repositories to their
+personal GitHub account as private repositories. This supersedes the earlier local-only
+restriction for committed files. It does not authorize uploading the ignored embedding
+arrays or archive: they remain local, with ARTIFACTS.json published=false.
+Companion links now point to the private repositories. Existing commit authorship is
+preserved; this documentation commit uses the same configured user identity without
+AI co-author attribution. No scientific code, result or model artifact was changed.
+The 2026-10-12 runtime checks remain historical; publication checks verify remote
+visibility, branch/tag hashes and clean local worktrees.

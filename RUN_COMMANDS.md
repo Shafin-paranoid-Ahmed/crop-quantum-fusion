@@ -21,7 +21,8 @@ $PY = Join-Path $PWD '.venv/Scripts/python.exe'
 
 The Git checkout includes small checkpoints and CSV evidence. Large NPZ inputs
 are excluded from Git but are already present in the three prepared working directories.
-There is no GitHub repository or release yet. A fresh local clone can restore them with:
+GitHub repositories are private. No embedding release is published. A fresh clone requires
+access to the local embedding bundle and can restore it with:
 
 ```powershell
 & $PY scripts/fetch_artifacts.py --from-archive 'G:/PROJECTS/RECOVERY/crop-multimodal-baselines/.artifacts/embeddings-v1.zip'
@@ -33,7 +34,7 @@ The helper refuses to overwrite differing artifacts and validates SHA-256. It co
 only paths listed in ARTIFACTS.json. The archive path is an example for this machine;
 the archive and repositories can be relocated. Raw datasets are not in the bundle.
 For quantum model checks, add `--quantum` to the verifier command after installing
-the quantum requirements. `--download` is disabled while publication status is local-only.
+the quantum requirements. `--download` remains disabled because embedding artifacts have not been published.
 
 ## Reproduction examples
 

@@ -3,7 +3,8 @@
 Original E3-4, early-recall loss rescue, the 4/8-dimensional matched bottleneck study, warm starts, residual and pair-targeted variants, re-uploading, and experiment-specific IoT diagnostics. Paired classical controls stay with each study. Best recorded E3 attack Macro-F1: 0.968655, below the original E2-matched-8 reference of 0.973356. This is a controlled evaluation with negative results, not evidence of predictive quantum advantage.
 
 This is an independent local research snapshot extracted on 2026-10-12.
-No GitHub repository or release has been created; future publication is intended to be private.
+The user authorized private GitHub publication on 2026-10-13.
+Only committed files are published; large embeddings and their ZIP bundle remain local.
 It does not require the original thesis checkout or a sibling repository for code imports.
 
 ## Start here
@@ -18,9 +19,9 @@ for checks actually run and their limits.
 
 ## Companion repositories
 
-- [crop-multimodal-baselines](../crop-multimodal-baselines/README.md)
-- [crop-quantum-fusion](../crop-quantum-fusion/README.md)
-- [crop-corruption-robustness](../crop-corruption-robustness/README.md)
+- [crop-multimodal-baselines](https://github.com/Shafin-paranoid-Ahmed/crop-multimodal-baselines)
+- [crop-quantum-fusion](https://github.com/Shafin-paranoid-Ahmed/crop-quantum-fusion)
+- [crop-corruption-robustness](https://github.com/Shafin-paranoid-Ahmed/crop-corruption-robustness)
 
 The baselines repository holds the local frozen embedding bundle in `.artifacts/embeddings-v1.zip`. Quantum fusion consumes
 those embeddings, while robustness evaluates frozen models from both projects.

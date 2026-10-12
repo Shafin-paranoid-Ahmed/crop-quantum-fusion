@@ -4,20 +4,20 @@
     "crop-multimodal-baselines": {
       "snapshot_tag": "snapshot-v1",
       "commit": "d46bfaba27d0fa6935cc330b9565b5ca1ad23489",
-      "planned_github_url": "https://github.com/Shafin-paranoid-Ahmed/crop-multimodal-baselines",
-      "local_directory": "../crop-multimodal-baselines"
+      "local_directory": "../crop-multimodal-baselines",
+      "url": "https://github.com/Shafin-paranoid-Ahmed/crop-multimodal-baselines"
     },
     "crop-quantum-fusion": {
       "snapshot_tag": "snapshot-v1",
       "commit": "cffdd212c0cd7811c36561a569c854c138b14dfb",
-      "planned_github_url": "https://github.com/Shafin-paranoid-Ahmed/crop-quantum-fusion",
-      "local_directory": "../crop-quantum-fusion"
+      "local_directory": "../crop-quantum-fusion",
+      "url": "https://github.com/Shafin-paranoid-Ahmed/crop-quantum-fusion"
     },
     "crop-corruption-robustness": {
       "snapshot_tag": "snapshot-v1",
       "commit": "8ff8f2834edf07ffce7f850232d9ee2c2ed39b57",
-      "planned_github_url": "https://github.com/Shafin-paranoid-Ahmed/crop-corruption-robustness",
-      "local_directory": "../crop-corruption-robustness"
+      "local_directory": "../crop-corruption-robustness",
+      "url": "https://github.com/Shafin-paranoid-Ahmed/crop-corruption-robustness"
     }
   },
   "embedding_contract": {
@@ -30,5 +30,5 @@
       5767
     ]
   },
-  "publication_status": "local_only; no remote configured"
+  "publication_status": "private GitHub repositories; embedding artifacts remain local"
 }
