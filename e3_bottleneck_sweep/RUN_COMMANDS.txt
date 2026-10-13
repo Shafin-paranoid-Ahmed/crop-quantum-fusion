@@ -1,6 +1,6 @@
 Run from repo root:
 
-G:\FOR THESIS\MAIN
+WORKSPACE
 
 Smoke test:
 

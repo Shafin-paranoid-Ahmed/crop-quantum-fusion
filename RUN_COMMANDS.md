@@ -1,7 +1,7 @@
 # Current standalone runbook
 
 Run from this repository root in native Windows PowerShell. The commands below
-are examples for manual use; extraction does not launch training or regenerate data.
+are examples for manual use; verification does not launch training or regenerate data.
 
 ## Environment
 
@@ -20,12 +20,11 @@ $PY = Join-Path $PWD '.venv/Scripts/python.exe'
 ## Frozen embedding inputs
 
 The Git checkout includes small checkpoints and CSV evidence. Large NPZ inputs
-are excluded from Git but are already present in the three prepared working directories.
-GitHub repositories are private. No embedding release is published. A fresh clone requires
-access to the local embedding bundle and can restore it with:
+are excluded from Git and no embedding release is published. A fresh clone needs
+the local embedding bundle and can restore it with:
 
 ```powershell
-& $PY scripts/fetch_artifacts.py --from-archive 'G:/PROJECTS/RECOVERY/crop-multimodal-baselines/.artifacts/embeddings-v1.zip'
+& $PY scripts/fetch_artifacts.py --from-archive '../crop-multimodal-baselines/.artifacts/embeddings-v1.zip'
 & $PY scripts/verify.py --artifacts
 ```
 

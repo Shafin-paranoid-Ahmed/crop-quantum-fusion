@@ -4,7 +4,7 @@ Last updated: 2026-06-01
 
 ## Purpose
 
-E1 is the IoT-only baseline for the thesis. It measures how much crop-disease-stage signal exists in the Dacon environmental sensor streams without using images.
+E1 is the IoT-only baseline for the project. It measures how much crop-disease-stage signal exists in the Dacon environmental sensor streams without using images.
 
 E1 is compared against:
 
@@ -19,7 +19,7 @@ E3: hybrid quantum-classical multimodal model
 All E1 work used:
 
 ```text
-G:\FOR THESIS\MAIN\.venv-e1\Scripts\python.exe
+WORKSPACE\.venv-e1\Scripts\python.exe
 ```
 
 Verified packages:
@@ -39,7 +39,7 @@ CUDA was used, but GPU utilization stayed low because E1 is a small tabular MLP.
 Main dataset:
 
 ```text
-G:\FOR THESIS\MAIN\Data
+WORKSPACE\Data
 ```
 
 Original manifests:
@@ -70,9 +70,9 @@ Stage mapping:
 For coherence with Abrar's E0 image-only baseline, E1 uses Abrar's fixed split:
 
 ```text
-G:\FOR THESIS\MAIN\Data\train.csv
-G:\FOR THESIS\MAIN\Data\val.csv
-G:\FOR THESIS\MAIN\Data\test.csv
+WORKSPACE\Data\train.csv
+WORKSPACE\Data\val.csv
+WORKSPACE\Data\test.csv
 ```
 
 Split sizes:
@@ -248,9 +248,9 @@ device: cuda
 Command:
 
 ```powershell
-cd "G:\FOR THESIS\MAIN\e1_iot_only"
+cd "WORKSPACE\e1_iot_only"
 
-& "G:\FOR THESIS\MAIN\.venv-e1\Scripts\python.exe" .\scripts\train_e1_iot_mlp.py `
+& "WORKSPACE\.venv-e1\Scripts\python.exe" .\scripts\train_e1_iot_mlp.py `
   --run-name e1_h128_64_nodrop_wd_bs512_sched `
   --seed 42 `
   --epochs 60 `
@@ -386,7 +386,7 @@ All-run comparison:
 results\e1_run_comparison.csv
 ```
 
-## Notes For Thesis Writing
+## Notes For Project Writing
 
 Suggested wording:
 

@@ -38,7 +38,7 @@ def main():
     args = parser.parse_args()
     if not args.quantum:
         sys.meta_path.insert(0, NoQuantum())
-    manifest = json.loads((ROOT / 'provenance/SOURCE_MANIFEST.json').read_text(encoding='utf-8'))
+    manifest = json.loads((ROOT / 'provenance/MANIFEST.json').read_text(encoding='utf-8'))
     checked, skipped = 0, 0
     for item in manifest['files']:
         p = ROOT / item['path']
@@ -46,9 +46,9 @@ def main():
             skipped += 1
             continue
         assert p.is_file(), f'Missing source artifact: {p}'
-        assert digest(p) == item['extracted_sha256'], f'Changed source artifact: {p}'
+        assert digest(p) == item['sha256'], f'Changed frozen artifact: {p}'
         checked += 1
-    print(f'Source manifest: {checked} hashes verified; {skipped} release inputs not required', flush=True)
+    print(f'Manifest: {checked} hashes verified; {skipped} release inputs not required', flush=True)
     for split, count in [('train', 46713), ('val', 5193), ('test', 5767)]:
         with (ROOT / 'Data' / f'{split}.csv').open(encoding='utf-8-sig', newline='') as stream:
             rows = list(csv.DictReader(stream))
@@ -66,7 +66,7 @@ def main():
     from sklearn.metrics import f1_score, accuracy_score
     torch.set_num_threads(2)
     from common.models import E1MLP
-    from common.thesis_eval import metrics_dict
+    from common.eval_metrics import metrics_dict
     from e2_multimodal_fusion.scripts.train_e2_fusion import E2FusionHead
 
     metrics_checked = 0
@@ -201,11 +201,12 @@ def main():
     elif not (ROOT / 'e3_quantum_fusion').exists():
         assert not any(name.startswith('pennylane') for name in sys.modules)
         print('Classical checks passed with PennyLane imports blocked', flush=True)
-    # Imported project modules must live here, never in the parent thesis checkout.
+    # Project packages must be imported from this checkout, never from a neighbouring copy.
+    local = {p.name for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.')}
     for name, module in list(sys.modules.items()):
-        location = str(getattr(module, '__file__', '')).replace('\\', '/').lower()
-        if '/for thesis/main/' in location and '/.venv' not in location and not location.startswith(str(ROOT).replace('\\', '/').lower() + '/'):
-            raise AssertionError(f'Parent checkout dependency: {name}: {location}')
+        location = getattr(module, '__file__', None)
+        if location and name.split('.')[0] in local and not Path(location).resolve().is_relative_to(ROOT):
+            raise AssertionError(f'Module loaded from outside this repository: {name}: {location}')
     print('PASS: standalone verification; no training or dataset generation', flush=True)
 
 if __name__ == '__main__':

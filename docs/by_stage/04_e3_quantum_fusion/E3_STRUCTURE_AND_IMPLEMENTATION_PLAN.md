@@ -125,7 +125,7 @@ Frozen E0 and E1 encoder parameters do not count toward E2-vs-E3 trainable param
 
 The shared projection into the bottleneck should be reported separately from the post-bottleneck head because `Linear(1344,128)` dominates the total parameter count, while the controlled classical/quantum substitution is the 16-parameter 4->4 middle.
 
-The thesis comparison should emphasize the matched decision head:
+The project comparison should emphasize the matched decision head:
 
 ```text
 E2 matched middle: 4 -> Linear(4,4,bias=False) -> 4
@@ -172,7 +172,7 @@ E3-4 = fair quantum test under the same bottleneck constraint
 E3-6 / E3-8 = later capacity-vs-stability analysis
 ```
 
-If E3 does not beat E2 on Macro F1, the thesis can still report useful outcomes through early-stage recall, calibration, robustness, parameter efficiency, and training stability.
+If E3 does not beat E2 on Macro F1, the project can still report useful outcomes through early-stage recall, calibration, robustness, parameter efficiency, and training stability.
 
 ## Required Metrics
 

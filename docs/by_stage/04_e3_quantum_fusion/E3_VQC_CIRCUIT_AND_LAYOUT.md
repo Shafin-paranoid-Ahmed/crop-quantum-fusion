@@ -314,13 +314,13 @@ total params:    173,073
 post params:     16
 ```
 
-## 10. Thesis Interpretation
+## 10. Project Interpretation
 
 The VQC should be described as a compact nonlinear decision sub-network operating
 on a learned 4-dimensional multimodal bottleneck. It is not a quantum image
 encoder and it does not process raw IoT time series directly.
 
-Suggested thesis wording:
+Suggested project wording:
 
 ```text
 The hybrid model first projects frozen image and environmental embeddings into a

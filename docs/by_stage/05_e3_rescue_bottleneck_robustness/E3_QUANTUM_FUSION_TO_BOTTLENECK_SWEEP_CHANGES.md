@@ -302,7 +302,7 @@ But the strongest 8D model overall is classical:
 E2-matched-8 has higher accuracy, Macro F1, macro recall, and mid-stage recall.
 ```
 
-## Thesis-Safe Summary
+## Project-Safe Summary
 
 Suggested wording:
 

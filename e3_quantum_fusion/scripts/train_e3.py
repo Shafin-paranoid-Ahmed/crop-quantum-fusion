@@ -1,7 +1,7 @@
 """Train E2-matched and/or E3-4 on the cached E2 embeddings (STUB).
 
 Reuses the frozen E2 embedding caches, the canonical split/class order, and the
-shared scoring logic in common/thesis_eval.py so E2 and E3 are scored identically.
+shared scoring logic in common/eval_metrics.py so E2 and E3 are scored identically.
 Fill in the training loop and result writing.
 
 Intended usage (once implemented):
@@ -26,7 +26,7 @@ for _p in (PROJECT_ROOT, E3_ROOT, E2_SCRIPTS):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 
-from common.thesis_eval import (  # noqa: E402
+from common.eval_metrics import (  # noqa: E402
     metrics_dict,
     per_class_metrics,
     save_confusion_matrix,

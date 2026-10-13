@@ -36,7 +36,7 @@ Data/test.csv:   5,767 rows
 | E1 IoT-only | 0.943645 | 0.883370 | 0.882642 | 0.997505 | 0.998793 | 0.939714 | 0.482143 | 0.016543 |
 | E2 classical fusion | 0.987342 | 0.967926 | 0.970493 | 0.998345 | 0.999274 | 0.986436 | 0.821429 | 0.006775 |
 
-All metrics are computed with the shared `common/thesis_eval.py` logic, so E0/E1/E2 (and the upcoming E3) are scored identically.
+All metrics are computed with the shared `common/eval_metrics.py` logic, so E0/E1/E2 (and the upcoming E3) are scored identically.
 
 ## Per-Stage Test Recall
 

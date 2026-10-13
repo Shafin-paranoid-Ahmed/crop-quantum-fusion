@@ -2,7 +2,7 @@
 
 Date locked: 2026-06-03
 
-This file declares the one canonical run per completed experiment. All thesis
+This file declares the one canonical run per completed experiment. All project
 docs, comparison tables, commands, and the future E3 comparison must reference
 these runs and no others. Do not compare E3 against older or inconsistent E0/E1/E2
 outputs.
@@ -60,7 +60,7 @@ Canonical validation Macro F1: E0 0.973325, E1 0.887618, E2 0.970913.
 Full per-stage recall, confusion matrices, and narrative live in
 [E0_E1_E2_RESULTS_COMPARISON.md](E0_E1_E2_RESULTS_COMPARISON.md).
 
-## Non-canonical E0 runs (do not cite for the thesis comparison)
+## Non-canonical E0 runs (do not cite for the project comparison)
 
 The E0 model directory contains several older checkpoints. Only the bs768 run
 above is canonical. In particular:

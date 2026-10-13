@@ -5,8 +5,8 @@ Last updated: 2026-07-01
 Use the project venv explicitly:
 
 ```powershell
-cd "G:\FOR THESIS\MAIN"
-$PY = "G:\FOR THESIS\MAIN\.venv-e1\Scripts\python.exe"
+cd "WORKSPACE"
+$PY = "WORKSPACE\.venv-e1\Scripts\python.exe"
 ```
 
 ## Hardware Note
@@ -64,19 +64,19 @@ $env:MKL_NUM_THREADS="12"
 ```powershell
 $env:OMP_NUM_THREADS="12"
 $env:MKL_NUM_THREADS="12"
-$out="G:\FOR THESIS\MAIN\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stdout.log"
-$err="G:\FOR THESIS\MAIN\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stderr.log"
+$out="WORKSPACE\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stdout.log"
+$err="WORKSPACE\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stderr.log"
 Remove-Item -LiteralPath $out -Force -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $err -Force -ErrorAction SilentlyContinue
-$p = Start-Process -FilePath $PY -ArgumentList @("-u","e3_bottleneck_sweep\scripts\train_reupload.py","--model","e3_reupload","--run-name","e3_8_reupload_r2_s42","--seed","42","--rounds","2","--layers-per-round","4","--sim","lightning.qubit","--batch-size","128","--middle-only-epochs","15","--joint-epochs","60","--patience","20","--middle-lr","0.005","--joint-middle-lr","0.001","--joint-head-lr","0.0001","--progress-batches","25","--torch-threads","12","--interop-threads","1") -WorkingDirectory "G:\FOR THESIS\MAIN" -RedirectStandardOutput $out -RedirectStandardError $err -WindowStyle Hidden -PassThru
+$p = Start-Process -FilePath $PY -ArgumentList @("-u","e3_bottleneck_sweep\scripts\train_reupload.py","--model","e3_reupload","--run-name","e3_8_reupload_r2_s42","--seed","42","--rounds","2","--layers-per-round","4","--sim","lightning.qubit","--batch-size","128","--middle-only-epochs","15","--joint-epochs","60","--patience","20","--middle-lr","0.005","--joint-middle-lr","0.001","--joint-head-lr","0.0001","--progress-batches","25","--torch-threads","12","--interop-threads","1") -WorkingDirectory "WORKSPACE" -RedirectStandardOutput $out -RedirectStandardError $err -WindowStyle Hidden -PassThru
 $p.Id
 ```
 
 Monitor:
 
 ```powershell
-Get-Content -LiteralPath "G:\FOR THESIS\MAIN\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stdout.log" -Wait -Tail 30
-Get-Content -LiteralPath "G:\FOR THESIS\MAIN\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stderr.log" -Wait -Tail 30
+Get-Content -LiteralPath "WORKSPACE\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stdout.log" -Wait -Tail 30
+Get-Content -LiteralPath "WORKSPACE\e3_bottleneck_sweep\e3_8_reupload_r2_s42_stderr.log" -Wait -Tail 30
 ```
 
 ## Parallel Hardware Utilization Option
@@ -84,17 +84,17 @@ Get-Content -LiteralPath "G:\FOR THESIS\MAIN\e3_bottleneck_sweep\e3_8_reupload_r
 If one quantum run underutilizes the machine, run independent seeds in parallel. Use fewer threads per process to avoid oversubscription.
 
 ```powershell
-$PY = "G:\FOR THESIS\MAIN\.venv-e1\Scripts\python.exe"
+$PY = "WORKSPACE\.venv-e1\Scripts\python.exe"
 $seeds = @(42,13,37)
 foreach ($seed in $seeds) {
   $env:OMP_NUM_THREADS="4"
   $env:MKL_NUM_THREADS="4"
   $run = "e3_8_reupload_r2_s$seed"
-  $out = "G:\FOR THESIS\MAIN\e3_bottleneck_sweep\${run}_stdout.log"
-  $err = "G:\FOR THESIS\MAIN\e3_bottleneck_sweep\${run}_stderr.log"
+  $out = "WORKSPACE\e3_bottleneck_sweep\${run}_stdout.log"
+  $err = "WORKSPACE\e3_bottleneck_sweep\${run}_stderr.log"
   Remove-Item -LiteralPath $out -Force -ErrorAction SilentlyContinue
   Remove-Item -LiteralPath $err -Force -ErrorAction SilentlyContinue
-  Start-Process -FilePath $PY -ArgumentList @("-u","e3_bottleneck_sweep\scripts\train_reupload.py","--model","e3_reupload","--run-name",$run,"--seed",$seed,"--rounds","2","--layers-per-round","4","--sim","lightning.qubit","--batch-size","128","--middle-only-epochs","15","--joint-epochs","60","--patience","20","--middle-lr","0.005","--joint-middle-lr","0.001","--joint-head-lr","0.0001","--progress-batches","25","--torch-threads","4","--interop-threads","1") -WorkingDirectory "G:\FOR THESIS\MAIN" -RedirectStandardOutput $out -RedirectStandardError $err -WindowStyle Hidden
+  Start-Process -FilePath $PY -ArgumentList @("-u","e3_bottleneck_sweep\scripts\train_reupload.py","--model","e3_reupload","--run-name",$run,"--seed",$seed,"--rounds","2","--layers-per-round","4","--sim","lightning.qubit","--batch-size","128","--middle-only-epochs","15","--joint-epochs","60","--patience","20","--middle-lr","0.005","--joint-middle-lr","0.001","--joint-head-lr","0.0001","--progress-batches","25","--torch-threads","4","--interop-threads","1") -WorkingDirectory "WORKSPACE" -RedirectStandardOutput $out -RedirectStandardError $err -WindowStyle Hidden
 }
 ```
 

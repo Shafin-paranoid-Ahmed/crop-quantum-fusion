@@ -1,9 +1,9 @@
 # Amplitude Encoding — Scoping & Future-Work Justification
 
-Closes P1 Objective 3 (*"examine and compare approaches to quantum feature encoding,
-e.g. amplitude and angle encoding"*). The thesis implements and characterises **angle
+Closes the proposal Objective 3 (*"examine and compare approaches to quantum feature encoding,
+e.g. amplitude and angle encoding"*). The project implements and characterises **angle
 encoding** in depth (the entire E3 line); **amplitude encoding** is scoped to future
-work for the reasons below. Pairs with `WHY_QUANTUM_DEFENSE_MEMO.md`.
+work for the reasons below.
 
 ---
 
@@ -19,7 +19,7 @@ second is deferred for principled, stated reasons rather than omitted silently.
 
 ---
 
-## Thesis-ready prose (paste into Discussion / Future Work)
+## Project-ready prose (paste into Discussion / Future Work)
 
 > Our hybrid model uses **angle encoding**, in which each value of the learned
 > low-dimensional fusion bottleneck is mapped to a single-qubit rotation. We
@@ -44,12 +44,12 @@ second is deferred for principled, stated reasons rather than omitted silently.
 > quantum substitution. Amplitude encoding has no comparably clean classical
 > counterpart and requires its own baseline definition; introducing it without that
 > baseline would reintroduce exactly the unmatched-comparison weakness we identify in
-> the prior literature (P1 §2.3, Table 2.1).
+> the prior literature (proposal §2.3, Table 2.1).
 >
 > Third, amplitude encoding is **costly and less NISQ-faithful** under our constraints.
 > Exact amplitude state preparation generally needs circuit depth that grows with the
 > state dimension and assumes normalised inputs, which conflicts with the shallow,
-> hardware-efficient, NISQ-oriented design this thesis targets; it is also markedly
+> hardware-efficient, NISQ-oriented design this project targets; it is also markedly
 > more expensive to simulate. Our quantum layer runs only on a CPU state-vector
 > simulator (no `lightning.gpu` was available in our environment), where even the
 > shallow angle-encoded circuit dominates training time. A fair multi-seed
@@ -64,9 +64,9 @@ second is deferred for principled, stated reasons rather than omitted silently.
 
 ---
 
-## Defense Q&A — if the chair pushes
+## Anticipated questions
 
-**Q: "P1 said you'd compare amplitude and angle encoding. Where is amplitude?"**
+**Q: "The proposal said you'd compare amplitude and angle encoding. Where is amplitude?"**
 > We fully characterised angle encoding and made a deliberate, documented decision to
 > defer amplitude encoding. The core reason is scientific, not just compute: our
 > dimensionality reduction is already done classically before the circuit, so at an

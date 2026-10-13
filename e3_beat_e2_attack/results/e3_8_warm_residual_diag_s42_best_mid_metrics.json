@@ -7,7 +7,7 @@
   "residual": true,
   "alpha_init": 0.1,
   "alpha_final": 13.416589736938477,
-  "warm_start_source": "G:\\FOR THESIS\\MAIN\\e3_bottleneck_sweep\\checkpoints\\best_e2_matched_8.pt",
+  "warm_start_source": "WORKSPACE\\e3_bottleneck_sweep\\checkpoints\\best_e2_matched_8.pt",
   "transplanted_modules": [
     "projection",
     "readout"

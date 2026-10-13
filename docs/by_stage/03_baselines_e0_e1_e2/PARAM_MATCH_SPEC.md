@@ -11,7 +11,7 @@ with a variational quantum circuit (VQC); everything else is held fixed.
 ## 1. Shared frozen interface
 
 Both E2 and E3 consume the same frozen embeddings produced by
-[scripts/extract_e2_embeddings.py](https://github.com/yes-yes-company/THESIS/blob/da7ad651d7e3eaebfa2216950a5f2dd0d0640a1a/e2_multimodal_fusion/scripts/extract_e2_embeddings.py):
+`e2_multimodal_fusion/scripts/extract_e2_embeddings.py` (in the crop-multimodal-baselines project):
 
 ```text
 E0 image encoder (frozen): 1280-dim embedding   (canonical e0_bs768_mobilenetv3large)
@@ -136,7 +136,7 @@ k, report total and post-bottleneck counts explicitly because k*k and 4k differ.
 
 ## 7. Required metrics for every E2/E3 comparison
 
-Scored with the shared `common/thesis_eval.py` logic so E2 and E3 are byte-identical:
+Scored with the shared `common/eval_metrics.py` logic so E2 and E3 are byte-identical:
 
 ```text
 accuracy
@@ -158,6 +158,6 @@ post_bottleneck_trainable_params
 - A 4-qubit `default.qubit` simulator is slow at full-dataset scale; budget time
   accordingly or precompute on the frozen embeddings (no image forward passes are
   needed because embeddings are cached).
-- If E3-4 does not beat E2-matched on Macro F1, the thesis still reports
+- If E3-4 does not beat E2-matched on Macro F1, the project still reports
   early-stage recall, calibration (ECE), robustness, parameter efficiency, and
   training stability per the master plan interpretation map.

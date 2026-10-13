@@ -1,4 +1,4 @@
-# FOR THESIS / MAIN - pinned environment for reproducing E0, E1, and E2.
+# Original research environment - pinned environment for reproducing E0, E1, and E2.
 # Versions verified against the live .venv-e1 interpreter on 2026-06-03.
 #
 # The torch/torchvision builds are CUDA 12.8 wheels. Install them from the

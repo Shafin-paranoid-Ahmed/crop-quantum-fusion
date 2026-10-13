@@ -1,6 +1,6 @@
 # E0 vs E1 Results
 
-Historical note: this comparison predates the selected E0 rerun and completed E2 fusion baseline. The E0 column here is the non-canonical batch-size-256 run `e0_mobilenetv3_large_gpu_bs256_unfreeze2_amp`, not the canonical bs768 run. For the current thesis comparison and the locked run names, use:
+Historical note: this comparison predates the selected E0 rerun and completed E2 fusion baseline. The E0 column here is the non-canonical batch-size-256 run `e0_mobilenetv3_large_gpu_bs256_unfreeze2_amp`, not the canonical bs768 run. For the current project comparison and the locked run names, use:
 
 ```text
 docs/by_stage/03_baselines_e0_e1_e2/E0_E1_E2_RESULTS_COMPARISON.md

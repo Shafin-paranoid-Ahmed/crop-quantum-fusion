@@ -79,7 +79,7 @@ Macro recall: +0.049104
 ECE:          -0.073350
 ```
 
-However, the gain is not uniformly thesis-positive. E3-4 loses about 10.3 points
+However, the gain is not uniformly project-positive. E3-4 loses about 10.3 points
 of early-stage recall and predicts no severe-stage test samples correctly. The
 Macro F1 improvement appears to come mainly from stronger mid-stage performance
 and healthier calibration, not from better early/severe detection.

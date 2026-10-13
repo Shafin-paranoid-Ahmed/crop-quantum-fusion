@@ -1,6 +1,7 @@
-# Attribution and source
+# Notice
 
-Extracted from https://github.com/yes-yes-company/THESIS at commit `da7ad651d7e3eaebfa2216950a5f2dd0d0640a1a` on 2026-10-12.
-Original authorship is retained; this snapshot does not claim sole authorship.
-No new redistribution license is granted by this extraction. Dataset and third-party model terms remain separate.
-See provenance/SOURCE_MANIFEST.json for source paths and hashes, and provenance/CHANGES.md for adaptations.
+Copyright (c) 2026 Shafin Ahmed, with contributions from @guardianbot1 and @thinkiamparanoid2.
+
+No open-source license has been granted yet. Until a LICENSE file is added, all rights are reserved.
+
+Raw images and sensor data are not redistributed; obtain an authorized copy of the dataset under its own terms. Pretrained model weights and third-party libraries keep their own licenses.

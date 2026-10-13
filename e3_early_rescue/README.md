@@ -24,7 +24,7 @@ The script reuses:
 ```text
 e2_multimodal_fusion/features/{train,val,test}_embeddings.npz
 e3_quantum_fusion/models.py
-common/thesis_eval.py
+common/eval_metrics.py
 ```
 
 It writes new artifacts only under:

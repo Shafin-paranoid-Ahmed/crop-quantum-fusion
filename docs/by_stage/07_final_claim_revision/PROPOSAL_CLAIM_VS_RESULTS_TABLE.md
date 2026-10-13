@@ -1,6 +1,6 @@
-# P1 Claim vs Results Table
+# Proposal Claim vs Results Table
 
-| Original P1 claim / objective | Experimental test used | Result | Supported / Partially supported / Not supported | Required thesis adjustment |
+| Original proposal claim / objective | Experimental test used | Result | Supported / Partially supported / Not supported | Required project adjustment |
 |---|---|---|---|---|
 | Hybrid model improves accuracy | E2-matched-8 vs E3-8 on the fixed test split | E2-matched-8 achieved higher accuracy than E3-8: 0.987515 vs 0.973643. | Not supported | Remove accuracy-improvement claim. Report E2-matched-8 as the strongest predictive model. |
 | Hybrid model improves scalability / NISQ feasibility | 4D and 8D compressed bottleneck VQC runs using PennyLane `lightning.qubit` | E3-4 and E3-8 ran as compact VQC heads, but E3 ran on CPU simulator and did not show computational-efficiency improvement. | Partially supported | State that the VQC is feasible as a compact NISQ-style head, not that it improves runtime or scalability. |
@@ -12,4 +12,4 @@
 
 ## Active Attack Branch Note
 
-The table above is the thesis-safe interpretation before any successful attack run. The active `e3_beat_e2_attack` branch has not changed the claim status yet. The completed warm-start run improved E3 Macro F1 to 0.956587, but it did not beat the E2-matched-8 bar of 0.973356. The current active direction is `docs/by_stage/06_e3_attack/E3_BEAT_E2_ATTACK_PLAN.md`; next target is `e3_8_warm_pair_s42`, with residual shortcut as the Section 13.2.5 follow-up.
+The table above is the project-safe interpretation before any successful attack run. The active `e3_beat_e2_attack` branch has not changed the claim status yet. The completed warm-start run improved E3 Macro F1 to 0.956587, but it did not beat the E2-matched-8 bar of 0.973356. The current active direction is `docs/by_stage/06_e3_attack/E3_BEAT_E2_ATTACK_PLAN.md`; next target is `e3_8_warm_pair_s42`, with residual shortcut as the Section 13.2.5 follow-up.

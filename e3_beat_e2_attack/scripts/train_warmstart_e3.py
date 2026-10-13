@@ -28,7 +28,7 @@ for _p in (PROJECT_ROOT, SWEEP_ROOT / "scripts", E2_SCRIPTS, E3_ROOT):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 
-from common.thesis_eval import metrics_dict, per_class_metrics, save_confusion_matrix, save_predictions  # noqa: E402
+from common.eval_metrics import metrics_dict, per_class_metrics, save_confusion_matrix, save_predictions  # noqa: E402
 from train_bottleneck import E2MatchedK, E3VQCK, count_param_split  # noqa: E402
 from train_e2_fusion import load_embedding_manifest, load_split, make_loader, predict, set_seed  # noqa: E402
 

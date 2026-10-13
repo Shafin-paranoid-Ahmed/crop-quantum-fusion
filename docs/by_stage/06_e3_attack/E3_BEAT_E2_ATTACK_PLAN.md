@@ -4,8 +4,7 @@
 > follow-ups below were subsequently run; see [the attack comparison](ATTACK_RUN_COMPARISON.md).
 > Best recorded E3 attack Macro-F1 is 0.968655, below the 0.973356 E2-matched-8
 > reference. Later re-uploading also did not beat the reference. Old "next
-> run" statements are preserved as history. For current SSL-HDC work, read
-> [the repository status report](https://github.com/yes-yes-company/THESIS/blob/da7ad651d7e3eaebfa2216950a5f2dd0d0640a1a/docs/by_stage/00_context_audit/REPO_STATUS_REPORT_2026-09-07.md).
+> run" statements are preserved as history.
 
 Date: 2026-06-05
 
@@ -202,7 +201,7 @@ More capacity can help mid-stage separation. Run this **after** fixing training,
 13. Problem-specific ansatz ablation (Section 11.2)
 14. Tier 2 architecture gaps (Section 13.4): deeper readout, QNG, layer-wise VQC
 
-### Phase 4 — post-thesis / future work only
+### Phase 4 — post-project / future work only
 
 15. Amplitude encoding tier (Section 11.3)
 16. Real-hardware sanity check
@@ -259,9 +258,9 @@ That is the most direct path from **0.9437 → 0.973+**.
 
 ---
 
-## 11. Advanced VQC directions (thesis vs future work)
+## 11. Advanced VQC directions (project vs future work)
 
-The current E3-8 circuit uses **one-shot angle encoding** (X rotations only), a **hardware-efficient ansatz** (RX/RY + CNOT ring), and **Pauli-Z readout**. That is a weak but fair first comparator. If Phase 1–2 plateau below E2 Macro F1, these are the advanced quantum upgrades — ranked by **thesis feasibility** and **likelihood of helping mid-stage separation**.
+The current E3-8 circuit uses **one-shot angle encoding** (X rotations only), a **hardware-efficient ansatz** (RX/RY + CNOT ring), and **Pauli-Z readout**. That is a weak but fair first comparator. If Phase 1–2 plateau below E2 Macro F1, these are the advanced quantum upgrades — ranked by **project feasibility** and **likelihood of helping mid-stage separation**.
 
 ### 11.1 Data re-uploading — **best advanced quantum bet (Phase 2)**
 
@@ -277,7 +276,7 @@ encode(x) -> VQC layer -> encode(x) -> VQC layer -> measure
 - Increases expressivity **without more qubits**.
 - Pairs naturally with **warm-start from E2-matched-8** (Section 2).
 
-**Thesis fit:** Good — if we build a **parameter-matched classical deep comparator** (Section 12).
+**Project fit:** Good — if we build a **parameter-matched classical deep comparator** (Section 12).
 
 **Risk:** deeper circuits train slower, gradients may vanish if too many re-upload blocks.
 
@@ -293,7 +292,7 @@ encode(x) -> VQC layer -> encode(x) -> VQC layer -> measure
 
 **Why it may help:** mid-stage confusion (`3_a9_2`, etc.) is task-specific; generic ansätze may underfit progression boundaries.
 
-**Thesis fit:** Medium — must still **match trainable params** and justify connectivity choice.
+**Project fit:** Medium — must still **match trainable params** and justify connectivity choice.
 
 **Verdict:** One ablation after re-uploading, not the main path.
 
@@ -303,15 +302,15 @@ encode(x) -> VQC layer -> encode(x) -> VQC layer -> measure
 
 **Why it is attractive:** more information into the quantum block without 256 physical qubits.
 
-**Why not for current thesis sprint:**
+**Why not for current project sprint:**
 
 - state preparation is expensive and must preserve normalization
 - training is harder (barren plateaus, unstable gradients)
 - **no simple E2-matched comparator** — fair comparison needs a new classical baseline definition
 - simulation cost on CPU is high
-- P1 listed angle vs amplitude (E11) but repo has not run it
+- the proposal listed angle vs amplitude (E11) but repo has not run it
 
-**Verdict:** Strong **post-thesis** direction. Mention in Discussion/Future Work; do not rely on it to beat E2-matched-8 before submission.
+**Verdict:** Strong **post-project** direction. Mention in Discussion/Future Work; do not rely on it to beat E2-matched-8 before submission.
 
 ### 11.4 Recommended stack order
 
@@ -422,7 +421,7 @@ E2-matched-8-deep + warm-start + mid_stage_CE (λ=1.0)
 
 ### 12.5 Metrics to report
 
-Same as all E2/E3 comparisons (`common/thesis_eval.py`):
+Same as all E2/E3 comparisons (`common/eval_metrics.py`):
 
 ```text
 accuracy, macro_f1, macro_recall
@@ -469,11 +468,11 @@ Reuse:
 
 ```text
 e2_multimodal_fusion/features/*_embeddings.npz
-common/thesis_eval.py
+common/eval_metrics.py
 e3_bottleneck_sweep/checkpoints/best_e2_matched_8.pt
 ```
 
-### 12.8 Thesis wording if re-upload wins
+### 12.8 Project wording if re-upload wins
 
 > Under an parameter-matched 8-dimensional bottleneck, a re-uploading VQC fusion head exceeded the matched deep classical comparator on test Macro F1, suggesting that repeated quantum feature encoding can improve progression-stage separation when initialized from a strong classical fusion baseline.
 
@@ -803,7 +802,7 @@ Warm-start/pair/residual attack results stay under `e3_beat_e2_attack/results/`.
 docs/by_stage/06_e3_attack/E3_REUPLOAD_EXECUTION_PLAN.md
 e3_bottleneck_sweep/RUN_COMMANDS_REUPLOAD.md
 docs/by_stage/07_final_claim_revision/FINAL_CLAIM_REVISION.md
-docs/by_stage/07_final_claim_revision/THESIS_RESULTS_NARRATIVE_DRAFT.md
+docs/by_stage/07_final_claim_revision/RESULTS_NARRATIVE_DRAFT.md
 docs/by_stage/05_e3_rescue_bottleneck_robustness/E3_4_vs_E3_8_BOTTLENECK_COMPARISON.md
 e3_bottleneck_sweep/scripts/train_bottleneck.py
 e3_early_rescue/E3_EARLY_RESCUE_COMPARISON.md

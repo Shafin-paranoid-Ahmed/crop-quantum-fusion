@@ -1,12 +1,12 @@
 Run from repo root:
 
-G:\FOR THESIS\MAIN
+WORKSPACE
 
 Optional environment setup:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
-.\scripts\thesis.ps1 -Action env
+.\scripts\project.ps1 -Action env
 ```
 
 You do not need to activate the venv if you call `.venv-e1\Scripts\python.exe`

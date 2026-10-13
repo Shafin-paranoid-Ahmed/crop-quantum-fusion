@@ -32,7 +32,7 @@
   "total_trainable_params": 173801,
   "post_bottleneck_trainable_params": 128,
   "post_bottleneck_match_note": "E2 post params = depth*8*8 = 128; matches E3 rounds=2, layers_per_round=4.",
-  "warm_start_checkpoint": "G:\\FOR THESIS\\MAIN\\e3_bottleneck_sweep\\checkpoints\\best_e2_matched_8.pt",
+  "warm_start_checkpoint": "WORKSPACE\\e3_bottleneck_sweep\\checkpoints\\best_e2_matched_8.pt",
   "e2_macro_f1_bar": 0.973356,
   "e0_checkpoint": "e0_image_only/canonical/best_e0_bs768_mobilenetv3large.pth",
   "e1_checkpoint": "e1_iot_only/canonical/best_e1_bs512_mlp128x64.pt",

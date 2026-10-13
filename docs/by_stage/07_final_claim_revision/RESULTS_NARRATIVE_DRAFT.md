@@ -1,4 +1,4 @@
-# Thesis Results Narrative Draft
+# Project Results Narrative Draft
 
 ## 1. Classical vs Quantum 4D Comparison
 
@@ -42,7 +42,7 @@ The allowed interpretation is: The VQC showed a consistent calibration advantage
 
 The final results partially support the quantum hypothesis only through calibration. They do not support the original expectation that the hybrid quantum-classical model would improve predictive accuracy over a strong matched classical comparator.
 
-The thesis remains valid because it provides a controlled evaluation of a hybrid QML classifier under NISQ bottleneck constraints. The final thesis framing should shift from improvement to rigorous evaluation. The correct final claim is that the tested VQC is feasible and better calibrated, but not more accurate or more robust than the matched classical baseline.
+The project remains valid because it provides a controlled evaluation of a hybrid QML classifier under NISQ bottleneck constraints. The final project framing should shift from improvement to rigorous evaluation. The correct final claim is that the tested VQC is feasible and better calibrated, but not more accurate or more robust than the matched classical baseline.
 
 ## 8. Active Attack Branch Status
 
@@ -58,4 +58,4 @@ Recommended next action:
 - Continue only the focused attack branch that targets the diagnosed pair collapse.
 - Use `docs/by_stage/06_e3_attack/E3_BEAT_E2_ATTACK_PLAN.md` as the active direction; 07/08 remain fallback/framing docs.
 - Do not claim quantum advantage unless an attack run beats the matched classical Macro F1 bar.
-- Move to thesis writing when the targeted attack branch is exhausted or too expensive.
+- Move to project writing when the targeted attack branch is exhausted or too expensive.

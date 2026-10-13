@@ -15,7 +15,7 @@ The goal is to check how much disease/class signal exists in the IoT data alone 
 Main dataset:
 
 ```text
-G:\FOR THESIS\MAIN\Data
+WORKSPACE\Data
 ```
 
 Original dataset manifests:
@@ -28,9 +28,9 @@ Data\test.csv  = 5,767 samples
 Abrar's E0 split was used for coherence:
 
 ```text
-G:\FOR THESIS\MAIN\Data\train.csv
-G:\FOR THESIS\MAIN\Data\val.csv
-G:\FOR THESIS\MAIN\Data\test.csv
+WORKSPACE\Data\train.csv
+WORKSPACE\Data\val.csv
+WORKSPACE\Data\test.csv
 ```
 
 Split sizes:
@@ -93,7 +93,7 @@ Total classes:
 Script:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\scripts\extract_iot_features.py
+WORKSPACE\e1_iot_only\scripts\extract_iot_features.py
 ```
 
 Each sample has one `_final.csv` sensor file:
@@ -215,8 +215,8 @@ test split
 Why MinMax normalization:
 
 ```text
-The thesis pipeline later uses quantum angle encoding, where bounded feature values are useful.
-MinMax normalization also matches the normalization logic described in the thesis report.
+The project pipeline later uses quantum angle encoding, where bounded feature values are useful.
+MinMax normalization also matches the normalization logic described in the project report.
 ```
 
 No validation or test information was used while fitting the scaler.
@@ -295,7 +295,7 @@ Weighted cross entropy reduces domination by majority classes.
 Why validation Macro F1 for checkpointing:
 
 ```text
-Macro F1 is the primary thesis metric and is more appropriate than accuracy for imbalanced classification.
+Macro F1 is the primary project metric and is more appropriate than accuracy for imbalanced classification.
 ```
 
 ---
@@ -423,43 +423,43 @@ It achieved the highest validation Macro F1 and the strongest overall test Macro
 Best checkpoint:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\checkpoints\best_e1_h128_64_nodrop_wd_bs512_sched.pt
+WORKSPACE\e1_iot_only\checkpoints\best_e1_h128_64_nodrop_wd_bs512_sched.pt
 ```
 
 Best metrics:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_metrics.json
+WORKSPACE\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_metrics.json
 ```
 
 Training history:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_history.csv
+WORKSPACE\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_history.csv
 ```
 
 Validation predictions:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_val_predictions.csv
+WORKSPACE\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_val_predictions.csv
 ```
 
 Test predictions:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_test_predictions.csv
+WORKSPACE\e1_iot_only\results\e1_h128_64_nodrop_wd_bs512_sched_test_predictions.csv
 ```
 
 Test confusion matrix:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\results\confusion_matrices\e1_h128_64_nodrop_wd_bs512_sched_test_confusion_matrix.csv
+WORKSPACE\e1_iot_only\results\confusion_matrices\e1_h128_64_nodrop_wd_bs512_sched_test_confusion_matrix.csv
 ```
 
 All-run comparison:
 
 ```text
-G:\FOR THESIS\MAIN\e1_iot_only\results\e1_run_comparison.csv
+WORKSPACE\e1_iot_only\results\e1_run_comparison.csv
 ```
 
 ---
@@ -505,7 +505,7 @@ Fusion may not be adding useful information, or one modality may dominate.
 
 ---
 
-## Suggested Thesis Wording
+## Suggested Project Wording
 
 ```text
 The IoT-only baseline evaluates whether environmental sensor measurements alone contain discriminative information for crop-disease-stage classification. Each time-series sensor file is converted into a 54-dimensional statistical summary vector by computing six descriptive statistics over nine selected environmental channels. A lightweight multilayer perceptron is trained using weighted cross entropy, train-only MinMax scaling, and validation Macro F1 checkpointing. The same fixed train/validation/test split used by the image-only baseline is used to ensure a fair comparison.

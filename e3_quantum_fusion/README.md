@@ -63,7 +63,7 @@ and can be reused directly.
 ```text
 quantum_layer.py       VQC TorchLayer
 models.py              FusionProjection, E2MatchedHead, E3HybridHead
-scripts/train_e3.py    training + scoring via common/thesis_eval
+scripts/train_e3.py    training + scoring via common/eval_metrics
 scripts/smoke_test.py  shape + param-count checks on real embeddings
 results/  checkpoints/
 ```
@@ -77,6 +77,6 @@ results/  checkpoints/
 
 ## Scoring
 
-Use `common/thesis_eval.py` (identical to E0/E1/E2). Each result JSON must include
+Use `common/eval_metrics.py` (identical to E0/E1/E2). Each result JSON must include
 `architecture`, `qubits`, `bottleneck_dim`, `total_trainable_params`,
 `post_bottleneck_trainable_params`, plus val/test metrics and the confusion matrix.

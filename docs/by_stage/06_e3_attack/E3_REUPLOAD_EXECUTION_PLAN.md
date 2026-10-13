@@ -53,7 +53,7 @@ The trainer supports `--eval-every` and `--train-val-batches` to reduce expensiv
 ## First Run Pair
 
 ```powershell
-$PY = "G:\FOR THESIS\MAIN\.venv-e1\Scripts\python.exe"
+$PY = "WORKSPACE\.venv-e1\Scripts\python.exe"
 & $PY -u e3_bottleneck_sweep\scripts\train_reupload.py --model e2_deep --run-name e2_matched_8_deep_r2_s42 --seed 42 --rounds 2 --batch-size 512 --middle-only-epochs 15 --joint-epochs 60 --patience 20 --middle-lr 0.005 --joint-middle-lr 0.001 --joint-head-lr 0.0001 --progress-batches 25
 
 $env:OMP_NUM_THREADS="12"

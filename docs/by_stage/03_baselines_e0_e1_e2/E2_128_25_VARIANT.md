@@ -78,5 +78,5 @@ Interpretation:
   parameter-matched bottleneck comparators.
 - It is not a fair E3 comparator because it removes the low-dimensional
   bottleneck required for VQC comparison.
-- It is a useful practical classical reference if the thesis discusses whether
+- It is a useful practical classical reference if the project discusses whether
   the 4D bottleneck in canonical E2 was necessary.

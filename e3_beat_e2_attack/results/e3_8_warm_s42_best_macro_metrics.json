@@ -4,7 +4,7 @@
   "checkpoint_kind": "best_macro",
   "seed": 42,
   "model": "e3_8_vqc_warmstart",
-  "warm_start_source": "G:\\FOR THESIS\\MAIN\\e3_bottleneck_sweep\\checkpoints\\best_e2_matched_8.pt",
+  "warm_start_source": "WORKSPACE\\e3_bottleneck_sweep\\checkpoints\\best_e2_matched_8.pt",
   "transplanted_modules": [
     "projection",
     "readout"
